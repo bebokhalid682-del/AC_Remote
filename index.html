@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="Remote_Body col-md-4 col-lg-3 container d-flex justify-content-center align-items-center flex-column ">
+        <div class="Remote_Screen d-flex flex-column col-9 mb-4 mt-5" style="height: 150px;">
+            <div class="Remote_Screen_Upper h-75 d-flex justify-content-center" id="switch">
+                <div class="Remote_Screen_Upper_Left col-4 d-flex justify-content-center">
+                    <i class="fa-solid fa-snowflake fs-4 mt-3" ></i>
+                </div>
+                <div class="Remote_Screen_Upper_Right col-8 d-flex flex-wrap">
+                    <p class="col-6 d-flex justify-content-center mt-1">FAN</p>
+                    <p class="col-6 d-flex justify-content-center mt-1">AUTO</p>
+                    <p class="col-12 d-flex justify-content-center fw-bold "><span style="font-size: 40px;" id="temp">25</span><span class="d-flex align-items-end" style="font-size: 30px;">°C</span></p>
+                </div>
+            </div>
+            <div onclick="powerSwitch()" class="Remote_Screen_Lower h-25 w-100 d-flex justify-content-center" id="switch2">
+                <div class="Remote_Screen_Lower_Left col-4">
+                    
+                </div>
+                <div class="Remote_Screen_Lower_Right col-8 d-flex justify-content-evenly">
+                    <i class="fa-regular fa-clock col-6 h-100 d-flex justify-content-end align-items-center fs-5"></i>
+                    <p class="col-6 h-100 d-flex justify-content-center fw-bold align-items-center fs-5">11 05</p>
+                </div>
+            </div>
+        </div>
+        <div class="Main_btn col-10 d-flex gap-3 justify-content-center mb-3 align-items-end">
+            <button class="col-3">OK</button>
+            <button onclick="powerSwitch()" class="col-3"  style="width: 60px; height: 60px;"><i class="fa-solid fa-power-off"></i></button>
+            <button class="col-3"><i class="fa-regular fa-clock"></i></button>
+        </div>
+        <div class="Temp_btn col-10 d-flex gap-5 justify-content-center mb-3 ">
+            <button onclick="decreseTemp()" class="col-4" style="width: 60px; height: 40px; border-radius: 4px;"><i class="fa-solid fa-minus " style="font-size: 20px;"></i></button>
+            <button onclick="increseTemp()" class="col-4" style="width: 60px ;height: 40px; border-radius: 4px;"><i class="fa-solid fa-plus"  style="font-size: 20px;"></i></button>
+        </div>
+        <div class="Control_btn col-10 d-flex flex-wrap gap-3 justify-content-center  mb-4">
+            <button class="col-5">FAN</button>
+            <button class="col-5">MODE</button>
+            <button class="col-5">CLOCK</button>
+            <button class="col-5">TIMER</button>
+        </div>
+        <div class="extra_btn col-12 d-flex flex-wrap gap-2 justify-content-center mb-5">
+            <button class="col-3">BLOW</button>
+            <button class="col-3">AUTO</button>
+            <button class="col-3">LIGHT</button>
+            <button class="col-3">TEMP</button>
+            <button class="col-3">TURBO</button>
+            <button class="col-3">SLEEP</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
