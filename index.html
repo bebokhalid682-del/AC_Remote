@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="Remote_Body col-md-4 col-lg-3 container d-flex justify-content-center align-items-center flex-column ">
+    <div class="Remote_Body col-md-4 col-lg-3 container d-flex justify-content-center align-items-center flex-column shadow">
         <div class="Remote_Screen d-flex flex-column col-9 mb-4 mt-5" style="height: 150px;">
             <div class="Remote_Screen_Upper h-75 d-flex justify-content-center" id="switch">
-                <div class="Remote_Screen_Upper_Left col-4 d-flex justify-content-center">
-                    <i class="fa-solid fa-snowflake fs-4 mt-3" ></i>
+                <div class="Remote_Screen_Upper_Left col-4 d-flex justify-content-center flex-column align-items-center gap-2 ">
+                    <i class="fa-solid fa-snowflake fs-4" id="mode_one" ></i>
+                    <i class="fa-solid fa-fire-flame-simple fs-4 invisible" id="mode_two"></i>
+                    <i class="fa-solid fa-fan fs-4 invisible" id="mode_three"></i>
                 </div>
                 <div class="Remote_Screen_Upper_Right col-8 d-flex flex-wrap">
                     <p class="col-6 d-flex justify-content-center mt-1">FAN</p>
@@ -42,7 +44,7 @@
         </div>
         <div class="Control_btn col-10 d-flex flex-wrap gap-3 justify-content-center  mb-4">
             <button class="col-5">FAN</button>
-            <button class="col-5">MODE</button>
+            <button onclick="modeSwitch()" class="col-5">MODE</button>
             <button class="col-5">CLOCK</button>
             <button class="col-5">TIMER</button>
         </div>
